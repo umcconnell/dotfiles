@@ -1,0 +1,11 @@
+{
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.sideBar.location": "right",
+    "window.titleBarStyle": "custom",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "telemetry.telemetryLevel": "off",
+    "workbench.enableExperiments": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
