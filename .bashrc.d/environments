@@ -1,0 +1,29 @@
+# Cargo & Rust
+source "$HOME/.cargo/env"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Deno
+export DENO_INSTALL="/home/ulysse/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+# PATH
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    # PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    # PATH="$DENO_INSTALL/bin:$PATH"
+    PATH="$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$DENO_INSTALL/bin:$PATH"
+fi
+
+# Go
+# PATH="/home/ulysse/go/bin:$PATH"
+
+# Lean
+# export PATH="$HOME/.elan/bin:$PATH"
+
+export PATH
+
+

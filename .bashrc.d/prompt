@@ -1,0 +1,9 @@
+__git_ps1() {
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        git branch --show-current 2>/dev/null | xargs printf "  %s"
+    else
+        echo ""
+    fi;
+}
+
+export PS1="\[\e[38;5;081m\]\u\[\e[38;5;245m\]@\[\e[38;5;206m\]\H \[\e[38;5;245m\]\w\[\e[38;5;081m\]\[\e[0;32m\]\[\e[0m\e[0;32m\]\$(__git_ps1)\[\e[0;36m\] $ \[\e[0m\]"

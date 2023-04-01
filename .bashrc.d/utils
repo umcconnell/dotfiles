@@ -1,0 +1,30 @@
+all-updates() {
+    # Cache password for later; Should work most of the times, otherwise
+    # user will be prompted twice :(
+    sudo -v;
+    echo "Upgrading deno...";
+    deno upgrade;
+    echo "Upgrading lean";
+    elan update;
+    echo "Upgrading rust...";
+    rustup update;
+    echo "Upgrading flatpak...";
+    flatpak update -y;
+    echo "Upgrading conda";
+    conda update -y --name base conda;
+    conda update --all;
+    echo "Upgrading system...";
+    sudo dnf update -y;
+    sudo dnf upgrade -y;
+}
+
+rtfm() {
+    help $@ || man $@ || info $@ || ($BROWSER "http://www.google.com/search?q=$@+manual" &)
+}
+
+merge-gh-pr-range() {
+    for i in $(seq $1 $2)
+    do
+        gh pr merge -dm $i
+    done
+}

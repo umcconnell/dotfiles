@@ -1,0 +1,9 @@
+# Fix small typos in dir names when using cd
+shopt -s cdspell
+# Tab suggestion: Only suggest directories for cd
+complete -d cd
+
+# Search backward for command instead of going up history
+# i.e. only look at history starting with current command fragment
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'

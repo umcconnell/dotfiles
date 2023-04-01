@@ -1,0 +1,31 @@
+[color]
+	ui = auto
+[user]
+	name = Ulysse McConnell
+	email = ulysse.mcconnell+dev@protonmail.com
+	signingKey = F3E28FB0347A0C4D
+[alias]
+	c = commit -av
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	ss = status -s
+        history = log --oneline --decorate --all --graph
+	alltags = tag --list
+	plog = log --graph --format='%Cgreen%h %Cred%aN%Cblue%d%Creset %s %C(yellow)(%cr)%Creset'
+	mine = !git plog --author=\"$(git config user.name) <$(git config user.email)>\"
+[credential]
+	helper = store
+[commit]
+	gpgsign = true
+[core]
+	editor = nano
+[submodule]
+	recurse = true
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
