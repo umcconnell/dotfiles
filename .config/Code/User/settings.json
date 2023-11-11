@@ -1,11 +1,35 @@
 {
-    "workbench.colorTheme": "GitHub Dark",
-    "workbench.sideBar.location": "right",
-    "window.titleBarStyle": "custom",
-    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
-    "editor.fontLigatures": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "telemetry.telemetryLevel": "off",
-    "workbench.enableExperiments": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.sideBar.location": "right",
+  "window.titleBarStyle": "custom",
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "telemetry.telemetryLevel": "off",
+  "workbench.enableExperiments": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.formatOnSave.enabled": true,
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "editor.formatOnSave": true,
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[ocaml]": {
+    "editor.defaultFormatter": "ocamllabs.ocaml-platform"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "editor.minimap.enabled": false
 }
