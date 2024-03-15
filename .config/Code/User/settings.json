@@ -31,5 +31,6 @@
     "markdown": false,
     "scminput": false
   },
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "terminal.integrated.inheritEnv": false
 }

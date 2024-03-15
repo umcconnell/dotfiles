@@ -1,6 +1,15 @@
 # Cargo & Rust
 source "$HOME/.cargo/env"
 
+# Vulkan
+source ~/Downloads/vulkansdk-linux-x86_64-1.3.268.0/1.3.268.0/setup-env.sh
+
+# ROS2
+source ~/Documents/Uni/ethz/lurp/ros2_humble/install/setup.bash
+
+# GHC Haskell / GHCup
+[ -f "/home/ulysse/.ghcup/env" ] && source "/home/ulysse/.ghcup/env" # ghcup-env
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -9,6 +18,9 @@ export NVM_DIR="$HOME/.nvm"
 # Deno
 export DENO_INSTALL="/home/ulysse/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# Lean prover
+export PATH="$HOME/.elan/bin:$PATH"
 
 # PATH
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
